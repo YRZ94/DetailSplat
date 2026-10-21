@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DetailSplat research project. Paper and code will be released after acceptance.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#267a72">
+  <title>DetailSplat — Project Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="DetailSplat home">DetailSplat<span class="brand-dot"></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-label="Project introduction">
+      <div class="eyebrow"><span></span> RESEARCH PROJECT</div>
+      <h1>
+        <img class="project-name" src="project-name.png" alt="DetailSplat" width="900" height="181">
+        <picture>
+          <source media="(max-width: 640px)" srcset="title-mobile.png">
+          <img class="paper-title" src="title-desktop.png" alt="Frequency-Aware Diffusion Refinement for Feed-Forward Novel View Synthesis">
+        </picture>
+      </h1>
+      <div class="byline">
+        <img class="authors" src="authors.png" alt="Anonymous Authors">
+        <img class="affiliations" src="affiliations.png" alt="Affiliations withheld for anonymous review">
+      </div>
+      <div class="resource-links" aria-label="Project resources">
+        <button class="resource primary" type="button" data-resource="Paper"><span>Paper</span><span aria-hidden="true">↗</span></button>
+        <button class="resource" type="button" data-resource="GitHub code"><span>GitHub Code</span><span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="release-note" id="release">Paper and code will be released after acceptance.</p>
+    </section>
+
+    <section class="content abstract" id="abstract" aria-labelledby="abstract-heading">
+      <div class="section-title"><span class="section-index">01</span><h2 id="abstract-heading">Abstract</h2></div>
+      <picture>
+        <source media="(max-width: 640px)" srcset="abstract-mobile.png">
+        <img class="abstract-image" src="abstract-desktop.png" alt="The paper abstract introduces texture-aware Gaussian densification and RCF-guided diffusion refinement, with evaluations on RealEstate10K, ACID and ScanNet++.">
+      </picture>
+    </section>
+
+    <section class="content method" id="method" aria-labelledby="method-heading">
+      <div class="section-title"><span class="section-index">02</span><h2 id="method-heading">Framework</h2></div>
+      <figure>
+        <button class="figure-button" type="button" data-zoom aria-label="Enlarge the DetailSplat framework diagram">
+          <img src="framework.png" alt="DetailSplat framework: context views, compact Gaussian initialization, texture-aware densification, rendering, and RCF-guided diffusion refinement." width="4185" height="1411" loading="lazy">
+          <span class="zoom-hint">View full resolution ↗</span>
+        </button>
+        <figcaption><span>Overall pipeline</span><span>Texture-aware densification · Spatially aligned refinement</span></figcaption>
+      </figure>
+      <details class="refinement-detail">
+        <summary><span>Explore the diffusion refinement module</span><span aria-hidden="true">+</span></summary>
+        <button class="figure-button" type="button" data-zoom aria-label="Enlarge the diffusion refinement diagram">
+          <img src="refinement.png" alt="RCF-guided diffusion refinement module from the manuscript." width="1980" height="594" loading="lazy">
+        </button>
+      </details>
+    </section>
+
+    <section class="content results" id="results" aria-labelledby="results-heading">
+      <div class="section-title"><span class="section-index">03</span><h2 id="results-heading">Results</h2></div>
+      <div class="tabs" role="tablist" aria-label="Result categories">
+        <button id="tab-re10k" role="tab" aria-selected="true" aria-controls="panel-re10k" type="button">RealEstate10K</button>
+        <button id="tab-generalization" role="tab" aria-selected="false" aria-controls="panel-generalization" tabindex="-1" type="button">Generalization</button>
+        <button id="tab-ablation" role="tab" aria-selected="false" aria-controls="panel-ablation" tabindex="-1" type="button">Module ablation</button>
+        <button id="tab-diffusion" role="tab" aria-selected="false" aria-controls="panel-diffusion" tabindex="-1" type="button">Diffusion backbones</button>
+      </div>
+      <div class="result-panel" id="panel-re10k" role="tabpanel" aria-labelledby="tab-re10k" tabindex="0">
+        <figure>
+          <button class="figure-button" type="button" data-zoom aria-label="Enlarge the RealEstate10K comparison">
+            <img src="results-re10k.png" alt="RealEstate10K qualitative comparison: C3G, DepthSplat, AnySplat, SPFSplat, EcoSplat, Ours and Ground Truth." width="1822" height="1099" loading="lazy"><span class="zoom-hint">View full resolution ↗</span>
+          </button>
+          <figcaption><span>Novel view synthesis</span><span>RealEstate10K · Qualitative comparison</span></figcaption>
+        </figure>
+      </div>
+      <div class="result-panel" id="panel-generalization" role="tabpanel" aria-labelledby="tab-generalization" tabindex="0" hidden>
+        <figure>
+          <button class="figure-button" type="button" data-zoom aria-label="Enlarge the cross-dataset comparison">
+            <img src="results-generalization.png" alt="Cross-dataset qualitative results on ACID and ScanNet++ from models trained on RealEstate10K." width="2642" height="890" loading="lazy"><span class="zoom-hint">View full resolution ↗</span>
+          </button>
+          <figcaption><span>Cross-dataset generalization</span><span>ACID · ScanNet++</span></figcaption>
+        </figure>
+      </div>
+      <div class="result-panel" id="panel-ablation" role="tabpanel" aria-labelledby="tab-ablation" tabindex="0" hidden>
+        <figure>
+          <button class="figure-button" type="button" data-zoom aria-label="Enlarge the module ablation comparison">
+            <img src="results-ablation.png" alt="Module ablation showing Baseline, w/o RCF, w/o TAGD, Full and Ground Truth." width="1328" height="844" loading="lazy"><span class="zoom-hint">View full resolution ↗</span>
+          </button>
+          <figcaption><span>Module ablation</span><span>RealEstate10K · 24 input views</span></figcaption>
+        </figure>
+      </div>
+      <div class="result-panel" id="panel-diffusion" role="tabpanel" aria-labelledby="tab-diffusion" tabindex="0" hidden>
+        <figure>
+          <button class="figure-button" type="button" data-zoom aria-label="Enlarge the diffusion backbone comparison">
+            <img src="results-diffusion.png" alt="Qualitative comparison of diffusion refinement backbones from the manuscript." width="1950" height="1117" loading="lazy"><span class="zoom-hint">View full resolution ↗</span>
+          </button>
+          <figcaption><span>Diffusion refinement</span><span>Comparison of refinement backbones</span></figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <footer><span>DetailSplat</span><span>Paper & code · Available after acceptance</span><a href="#top">Back to top ↑</a></footer>
+
+  <dialog id="resource-dialog" aria-labelledby="resource-heading">
+    <div class="dialog-body"><p class="eyebrow">COMING AFTER ACCEPTANCE</p><h2 id="resource-heading">Paper</h2>
+      <p>This resource is not public yet. The link will be added after the paper is accepted.</p>
+      <button class="resource primary close-dialog" type="button">Got it</button>
+    </div>
+  </dialog>
+  <dialog id="image-dialog" aria-label="Full resolution figure">
+    <div class="image-toolbar"><span>Original manuscript figure</span><a id="image-download" href="#" download>Download PNG ↗</a><button class="close-dialog" type="button" aria-label="Close enlarged figure">Close ×</button></div>
+    <div class="image-scroll"><img id="enlarged-image" alt=""></div>
+  </dialog>
+</body>
+</html>
