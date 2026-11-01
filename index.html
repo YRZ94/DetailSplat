@@ -28,10 +28,10 @@
             </picture>
           </h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><img class="author-image" src="authors.png" alt="Anonymous Authors"></span>
+            <span class="author-block"><picture><source media="(max-width: 600px)" srcset="authors-mobile.png"><img class="author-image" src="authors.png" alt="Yurong Zeng (1); Rui Zhang (2*); Ming Gao (1); Vladimir Golovko (9,10); Abdulkadir Sengur (3); Karen Egiazarian (4); Leszek Rutkowski (5,6); Aura Conci (7); Xun Wang (1); Yan Tian (1,8*). * Corresponding authors." width="1920" height="287"></picture></span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><img class="affiliation-image" src="affiliations.png" alt="Affiliations withheld for anonymous review"></span>
+            <span class="author-block"><picture><source media="(max-width: 600px)" srcset="affiliations-mobile.png"><source media="(max-width: 1023px)" srcset="affiliations-tablet.png"><img class="affiliation-image" src="affiliations.png" alt="1: School of Computer Science and Technology, Zhejiang Gongshang University, Hangzhou 310018, China; 2: School of Management and E-Business, Zhejiang Gongshang University, Hangzhou 310018, China; 3: Department of Electrical and Electronic Engineering, Faculty of Technology, Firat University, Elazig 23000, Turkey; 4: Department of Computing Sciences, Tampere University, Tampere 33720, Finland; 5: Systems Research Institute of the Polish Academy of Sciences, Warsaw 01-447, Poland; 6: AGH University of Krakow, Krakow 30-059, Poland; 7: Department of Computer Science, Universidade Federal Fluminense, Niteroi 24210-346, Brazil; 8: Zhejiang Key Laboratory of Big Data and Future E-Commerce Technology, Hangzhou 310018, China; 9: John Paul II University in Biala Podlaska, Biala Podlaska 21-500, Poland; 10: Laboratory of Artificial Neural Networks, Brest State Technical University, Brest 224017, Republic of Belarus" width="1920" height="582"></picture></span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -68,7 +68,7 @@
         <div class="content has-text-justified abstract-content">
           <picture>
             <source media="(max-width: 768px)" srcset="abstract-mobile.png">
-            <img src="abstract-desktop.png" alt="Abstract: texture-aware densification allocates Gaussian capacity using frequency cues, and RCF-guided diffusion refines novel views. Evaluations cover RealEstate10K, ACID and ScanNet++.">
+            <img src="abstract-desktop.png" alt="Feed-forward 3D Gaussian Splatting (3DGS) enables rapid prediction of 3D representations from sparse multi-view inputs without costly per-scene optimization. However, existing Gaussian prediction methods struggle to adapt representation capacity to local scene complexity, resulting in redundant primitives in smooth regions and insufficient capacity in texture-rich areas. Moreover, the inherent ambiguity of sparse observations often leads to blurred reconstructions, whereas unconstrained diffusion refinement may introduce appearance inconsistencies or hallucinated content. We propose DetailSplat, a feed-forward 3DGS framework that performs spatially adaptive densification under a fixed Gaussian budget and incorporates diffusion-based refinement for detail enhancement. Specifically, we introduce Texture-Aware Gaussian Densification (TAGD), which aggregates local high-frequency texture cues from the input views into texture complexity scores for individual 3D Gaussian primitives, guiding the spatial allocation of additional representation capacity. We further introduce a Refinement Control Field (RCF), which equips spawned Gaussians with learnable control attributes and renders them from target viewpoints into spatially aligned refinement guidance maps. These maps guide the diffusion model to recover missing details while retaining the existing image structure and appearance. Compared with the baseline with the highest Peak Signal-to-Noise Ratio (PSNR), our method increases PSNR from 27.816 to 29.588 dB on RealEstate10K with 24 input views. The project page is available at https://yrz94.github.io/DetailSplat/.">
           </picture>
         </div>
       </div>

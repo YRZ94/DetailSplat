@@ -4,7 +4,7 @@
 
 [Project page](https://yrz94.github.io/DetailSplat/)
 
-Paper and model code will be released after acceptance. Authors and affiliations are currently withheld on the project page.
+Paper and model code will be released after acceptance. Author order and affiliation numbers match the current manuscript. Title, authors, affiliations and abstract are displayed as PNG images, with separate mobile layouts.
 
 ## Website template
 

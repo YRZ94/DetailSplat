@@ -4,8 +4,8 @@
 body{font-family:'Noto Sans',sans-serif}
 .publication-title img{display:block;width:100%;height:auto;margin:0 auto}
 .publication-title picture{display:block}
-.author-image{display:block;width:430px;max-width:100%;height:auto;margin:auto}
-.affiliation-image{display:block;width:550px;max-width:100%;height:auto;margin:auto}
+.author-image{display:block;width:100%;max-width:100%;height:auto;margin:auto}
+.affiliation-image{display:block;width:100%;max-width:100%;height:auto;margin:auto}
 .publication-authors .author-block{max-width:100%}
 #release-note{margin-top:.6rem}
 .paper-figure{margin:0!important}
@@ -29,4 +29,4 @@ dialog::backdrop{background:#000a}
 .image-scroll{max-height:calc(95dvh - 60px);overflow:auto;padding:12px}
 .image-scroll img{display:block;width:100%;height:auto;max-width:none}
 body.modal-open{overflow:hidden}
-@media(max-width:768px){.hero-body{padding:2.5rem 1.5rem}.publication-title{margin-bottom:1.5rem!important}.author-image{width:310px}.affiliation-image{width:340px}.hero.is-small .hero-body{padding:1.5rem}.section{padding:2rem 1.5rem}.image-scroll img{width:auto;min-width:100%;max-height:78dvh}.footer .content{font-size:14px}}
+@media(max-width:768px){.hero-body{padding:2.5rem 1.5rem}.publication-title{margin-bottom:1.5rem!important}.author-image,.affiliation-image{width:100%}.hero.is-small .hero-body{padding:1.5rem}.section{padding:2rem 1.5rem}.image-scroll img{width:auto;min-width:100%;max-height:78dvh}.footer .content{font-size:14px}}
